@@ -1,0 +1,82 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  background-color: #1B2430;
+}
+
+button {
+  background-color: #2a9d8f;
+  border: 0;
+  border-radius: 5px;
+  color:black;
+  padding: 10px 25px;
+  font-size: 20px;
+}
+
+.modal-container {
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  opacity: 0;
+  pointer-events: none;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  transition: .2s all;
+}
+
+.animation {
+  animation: modalAnimation .5s ease 1;
+}
+
+.modal-container.show {
+  pointer-events: auto;
+  opacity: 1;
+}
+
+.modal {
+  background-color: #fff;
+  padding: 30px 50px;
+  border-radius: 5px;
+  width: 37.5rem;
+  max-width: 100%;
+  text-align: center;
+}
+
+.modal h1 {
+  font-weight: 500;
+}
+
+.modal p {
+  opacity: 0.8;
+}
+
+.modal button {
+  margin-top: 10px;
+}
+
+@keyframes modalAnimation {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+
+  100% {
+    transform: translateY(0px);
+    opacity: 1;
+  }
+}
